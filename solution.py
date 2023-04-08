@@ -14,4 +14,4 @@ def solution(p: float, x: np.array) -> tuple:
     loc = 2 *x.mean()/(59**2)
     scale = np.sqrt((4 / (59 ** 4))*np.var(x)) / np.sqrt(len(x))
     return loc - scale * norm.ppf(1 - alpha / 2), \
-           loc - scale * norm.ppf(alpha / 2)
+           loc + scale * norm.ppf(1 - alpha / 2)
