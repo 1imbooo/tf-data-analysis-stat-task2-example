@@ -38,4 +38,4 @@ def solution(p: float, x: np.array) -> tuple:
     distance = x 
     interval = acceleration_confidence_interval(distance, confidence_level)
     
-    return [{interval[0]}, {interval[1]}]
+    return interval[0], interval[1]
